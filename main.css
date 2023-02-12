@@ -1,0 +1,112 @@
+:root {
+    --primary-color: purple;
+    --primary-color-dark: rgb(68, 0, 68);
+    --secondary-color: rgb(172, 172, 172);
+    --secondary-color-dark: rgb(116, 116, 116);
+
+    --text-color: var(--primary-color);
+    --bg-color: var(--secondary-color);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+body * {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* GENERAL */
+a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+}
+button,
+input[type=submit] {
+    cursor: pointer;
+}
+
+.input-1 {
+    --text-color: var(--primary-color-dark);
+
+    background-color: white;
+    color: var(--text-color);
+
+    border: none;
+    border-bottom: 0.1rem;
+    border-radius: 5rem;
+    
+    font-size: 2rem;
+    
+    padding: .5em 1em;
+
+    transition: .2s;
+}
+input[type=submit].input-1 {
+    margin-left: 1rem;
+    font-weight: bold;
+}
+input[type=submit].input-1:hover {
+    box-shadow: inset 0 0 .1em var(--text-color);
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 2rem 5rem;
+
+    --text-color: var(--secondary-color);
+    --bg-color: var(--primary-color-dark);
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+header .header--logo {
+    width: 2rem;
+    height: 2rem;
+
+    background-color: var(--text-color);
+}
+header .header--right {
+    display: flex;
+    gap: .8em;
+
+    font-size: 1rem;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+    min-height: 80vh;
+}
+
+
+footer {
+    padding: 2rem 5rem;
+
+    text-align: center;
+    font-style: italic;
+    font-size: .6rem;
+
+    --text-color: var(--secondary-color);
+    --bg-color: var(--primary-color-dark);
+
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
